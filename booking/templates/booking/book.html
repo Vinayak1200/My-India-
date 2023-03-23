@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ticket Booking Form</title>
+</head>
+<body>
+	<h2>Ticket Booking Form</h2>
+     {% csrf_token %}
+	<form action="thankyou.html" method="get">
+
+		<label for="date">Date:</label>
+		<input type="date" id="date" name="date" ><br><br>
+
+		<label for="time">Time:</label>
+		<input type="time" id="time" name="time" ><br><br>
+
+		{% comment %} <label for="ticket-type">Ticket Type:</label> {% endcomment %}
+		{% comment %} <select id="ticket-type" name="ticket-type" > {% endcomment %}
+			{% comment %} <option value="">Select Ticket Type</option> {% endcomment %}
+			{% comment %} <option value="standard">Standard</option> {% endcomment %}
+			{% comment %} <option value="vip">VIP</option> {% endcomment %}
+			{% comment %} <option value="premium">Premium</option> {% endcomment %}
+		{% comment %} </select><br><br> {% endcomment %}
+
+		<label for="quantity">Number of People:</label>
+		<input type="number" id="quantity" name="quantity" min="1" max="10"><br><br>
+
+		<a href="{% url 'booking/thankyou' %}"><button type="submit">Submit</button></a>
+	</form>
+</body>
+</html>
