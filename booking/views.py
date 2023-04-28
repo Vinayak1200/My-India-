@@ -186,7 +186,7 @@ def Downloadpdf(request):
     date = request.GET.get('date')
     amount = request.GET.get('amount')
     parking_amt = request.GET.get('parking_amt')
-    datadict = {
+    param_dict = {
         'name':name,
         'number_adults':numberA,
         'number_children':numberC,
@@ -195,12 +195,54 @@ def Downloadpdf(request):
         'parking_amt':amount
     }
     
-    buffer = GeneratePDF(datadict)
-    response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename=ticket.pdf'
-    response.write(buffer.getvalue())
-    buffer.close()
+    # buffer = GeneratePDF(datadict)
+    response = HttpResponse(content_type='application/pnf')
+    response['Content-Disposition'] = 'attachment; filename=ticket.png'
+    # response.write(buffer.getvalue())
+    # buffer.close()
+    # imgname = 'img{f}'.format(f=GeneratePDF.counter)
+    # imgpath = 'img.png'
+    # buffer = io.BytesIO()
+    # pagesize = (8 * inch, 7.5 * inch)
+    # buffer = io.BytesIO()
+    # Generate QR code from booking details
+    qr = pyqrcode.create(str(param_dict))
+    qr_img_path = 'qr_code.png'
+    qr.png(response,scale=8)
+    
+    # details_data = [
+    # ['BOOKING DETAILS FOR', param_dict['name']],
+    # ['Name:', param_dict['name']],
+    # ['Booking date:', param_dict['date']],
+    # ['Adults :',param_dict['number_adults']],
+    # ['Children :',param_dict['number_children']],
+    # ['Booking amount :',param_dict['amount']],
+    # ['Parking amount :',param_dict['parking_amt']],
+    # ['Destination:', ''],
+# ]
+    # 
+    # doc = SimpleDocTemplate(response, pagesize=pagesize)
 
+    # Define elements for the PDF
+    # elements = []
+    # details_table = Table(details_data)
+    # details_table = Table(details_data,colWidths=[doc.width],rowHeights=[22 for i in range(8)])
+    # details_table.setStyle(TableStyle([
+    # ('BACKGROUND', (0, 0), (-1, 0), colors.lightskyblue),
+    # ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+    # ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+    # ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+    # ('FONTSIZE', (0, 0), (-1, 0), 14),
+    # ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+    # ('BACKGROUND', (0, 1), (-1, -1), colors.lightblue),
+    # ('GRID', (0, 0), (-1, -1), 1, colors.whitesmoke)
+# ]))
+    # elements.append(Image('MHI.png', height=60, width=60 ))
+    # elements.append(details_table)
+    # qr_code_img = Image(qr_img_path, width=120, height=120)
+    # elements.append(Spacer(0.5, 1))
+    # elements.append(qr_code_img)
+# 
     return response
 
     
@@ -228,7 +270,7 @@ def AfterBooking(request):
         params = {'name':name,'gender':gender,'age':age,'number adults':numberA,'number children':numberC,'country':country,'nationality':nationality,'parking':parking,'date':date,'amount':amount,'parking_amt':car_amt}
         
         # bookingdata = [date, time, numberA, numberC, str(amount)]
-        obj = db.booking_booking.insert_one(params)
+        # obj = db.booking_booking.insert_one(params)
         
        
         

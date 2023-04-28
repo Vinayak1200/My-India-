@@ -1,0 +1,755 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <title>My Heritage India </title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" href="{% static 'booking/images/logo1.png' %}" type="image/x-icon">
+
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link href="{% static 'booking/css/font-awesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/owl.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/jquery.fancybox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/nice-select.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/jquery-ui.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/color.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/responsive.css' %}" rel="stylesheet">
+
+</head>
+
+
+<!-- page wrapper -->
+
+<body style="background-image: url({% static 'booking/images/resource/white-paper-texture.jpg' %}) !important;">
+
+    <div class="boxed_wrapper">
+
+
+        <!-- preloader -->
+        <div class="loader-wrap">
+            <div class="preloader">
+                <div class="preloader-close">Preloader Close</div>
+                <div id="handle-preloader" class="handle-preloader">
+                    <div class="animation-preloader">
+                        <div class="spinner"></div>
+                        <div class="txt-loading">
+                            <span data-text-preloader="M" class="letters-loading">
+                                M
+                            </span>
+                            <span data-text-preloader="Y" class="letters-loading">
+                                Y
+                            </span>
+                            <span data-text-preloader="H" class="letters-loading">
+                                H
+                            </span>
+                            <span data-text-preloader="E" class="letters-loading">
+                                E
+                            </span>
+                            <span data-text-preloader="RI" class="letters-loading">
+                                RI
+                            </span>
+                            <span data-text-preloader="T" class="letters-loading">
+                                T
+                            </span>
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
+                            </span>
+                            <span data-text-preloader="GE" class="letters-loading">
+                                GE
+                            </span>
+                            <span data-text-preloader="IN" class="letters-loading">
+                                IN
+                            </span>
+                            <span data-text-preloader="DI" class="letters-loading">
+                                DI
+                            </span>
+                            <span data-text-preloader="A" class="letters-loading">
+                                A
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- preloader end -->
+
+
+        <!-- main header -->
+        <header class="main-header style-one">
+            <!-- header-lower -->
+            <div class="header-lower">
+                <div class="auto-container">
+                    <div class="outer-box">
+                        <div class="logo-box">
+                            <figure class="logo"><a href="index.html"><img src="{% static 'booking/images/logo1.png' %}" alt=""></a>
+                            </figure>
+                        </div>
+                        <div class="menu-area clearfix">
+                            <!--Mobile Navigation Toggler-->
+                            <div class="mobile-nav-toggler">
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                                <i class="icon-bar"></i>
+                            </div>
+                            <nav class="main-menu navbar-expand-md navbar-light">
+                                <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                          <li class="current dropdown"><a href="index.html">Home</a></li>
+                                        <li class="dropdown"><a href="destination.html">Destinations</a></li>
+                                        <li><a href="contact.html">Contact</a></li> 
+                   
+                                       <li><a href="login.html">Login</a></li>  
+
+                                    </ul>
+                                </div>
+                            </nav>
+                        </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!--sticky Header-->
+            <div class="sticky-header">
+                <div class="auto-container">
+                    <div class="outer-box">
+                        <div class="logo-box">
+                            <figure class="logo"><a href="index.html"><img src="{% static 'booking/images/logo1.png' %}" alt=""></a>
+                            </figure>
+                        </div>
+                        <div class="menu-area">
+                            <nav class="main-menu clearfix">
+                                <!--Keep This Empty / Menu will come through Javascript-->
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- main-header end -->
+
+        <!-- Mobile Menu  -->
+        <div class="mobile-menu">
+            <div class="menu-backdrop"></div>
+            <div class="close-btn"><i class="fas fa-times"></i></div>
+
+            <nav class="menu-box">
+                <div class="nav-logo"><a href="index.html"><img src="{% static 'booking/images/logo1.png' %}" alt="" title=""></a></div>
+                <div class="menu-outer">
+                    <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
+                </div>
+                <div class="contact-info">
+                    <h4>Contact Info</h4>
+                    <ul>
+                        <li>My Heriage India</li>
+                        <li><a href="tel:+91 00000 00000">+91 00000 00000</a></li>
+                        <li><a href="mailto:info@example.com">Mail.com</a></li>
+                    </ul>
+                </div>
+                <div class="social-links">
+                    <ul class="clearfix">
+                        <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div><!-- End Mobile Menu -->
+
+
+        <!-- banner-section -->
+        <section class="banner-section" style="background-image: url({% static 'booking/images/banner/banner-1.jpg' %});">
+            <div class="pattern-layer" style="background-image: url({% static 'booking/images/shape/shape-1.png' %});"></div>
+            <div class="auto-container">
+                <div class="content-box">
+                    <h2>Explore <br />Your Historical Places</h2>
+                    <p>Discover more about history and become an explorer Book your tickets now!</p>
+                </div>
+            </div>
+        </section>
+        <!-- banner-section end -->
+
+
+        <!-- feature-section -->
+        <section class="feature-section centred bg-color-1 sec-pad">
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <p>My Heritage India</p>
+                    <h2>Benefits of Pre-Booking Tickets</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated" data-wow-delay="00ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/feature-1.jpg' %}" alt="">
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><i class="icon-1"></i></div>
+                                    <h4>200+ Monuments & Museums</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated" data-wow-delay="200ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static  'booking/images/resource/feature-2.jpg' %}" alt="">
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><i class="icon-2"></i></div>
+                                    <h4> Saves Time<br><br></h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated" data-wow-delay="400ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/feature-3.jpg' %}" alt="">
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><i class="icon-3"></i></div>
+                                    <h4>Flawless Travel Experience</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 feature-block">
+                        <div class="feature-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/feature-4.jpg' %}" alt="">
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="icon-box"><i class="icon-4"></i></div>
+                                    <h4>98% of Our Travelers are Happy</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- feature-section end -->
+
+
+        <!-- about-section -->
+        <section class="about-section">
+            <div class="pattern-layer" style="background-image: url({% static 'booking/images/shape/shape-2.png' %});"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-6 col-md-12 col-sm-12 image-column">
+                        <div class="image_block_1">
+                            <div class="image-box">
+                                <div class="shape">
+                                    <div class="shape-1"
+                                        style="background-image: url({% static 'booking/images/shape/shape-2.png' %});"></div>
+                                    <div class="shape-2"
+                                        style="background-image: url({% static 'booking/images/shape/shape-3.png' %});"></div>
+                                </div>
+                                <figure class="image image-1">
+                                    <img src="{% static 'booking/images/resource/about-1.jpg' %}" alt="">
+                                    <div class="shape-3"
+                                        style="background-image: url({% static 'booking/images/shape/shape-3.png' %});"></div>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 col-sm-12 content-column">
+                        <div class="content_block_1">
+                            <div class="content-box">
+                                <div class="sec-title">
+                                    <p>About My Heritage India</p>
+                                    <h2>A QR - Based Ticketing System For Monuments</h2>
+                                </div>
+                                <div class="text">
+                                    <p>We at My Heritage India, want to make the Visit to Monument or any heritage site Simpler
+                                        by incorporating the use of Qr Based Paperless Ticketing System which will be
+                                        beneficial to all the visitors as well as the administration.</p>
+                                </div>
+                                <ul class="list clearfix">
+                                    <li>QR Based Paperless Visitor System.</li>
+                                    <li>Saves Times & Hassle of booking Tickets.</li>
+                                    <li>Beneficial to the Visitor & Administration.</li>
+                                </ul>
+                                <div class="btn-box">
+                                    <a href="login.html" class="theme-btn">Book Your Tickets Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about-section end -->
+
+
+        <!-- tour-section -->
+        <section class="tour-section bg-color-1 sec-pad">
+            <div class="pattern-layer" style="background-image: url({% static 'booking/images/shape/shape-4.png' %});"></div>
+            <div class="auto-container">
+                <div class="sec-title text-center">
+                    <p>Modern & Beautiful</p>
+                    <h2>Some Most Popular Monuments</h2>
+                </div>
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 tour-block">
+                        <div class="tour-block-one wow fadeInUp animated animated" data-wow-delay="00ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <img src="{% static 'booking/images/resource/taj.jpg' %}" alt="">
+                                    <a href="TajMahal.html"><i class="fas fa-link"></i></a>
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="rating"><span><i class="fas fa-star"></i>8.0 Superb</span></div>
+                                    <h3><a href="TajMahal.html">Taj Mahal</a></h3>
+                                    <h4>RS.50 - Rs.1300<span> / Per person</span></h4>
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>6 Days (Friday Closed)</li>
+                                        <li><i class="far fa-map"></i>Agra, India</li>
+                                    </ul>
+                                    <p>The Taj Mahal, is an Islamic ivory-white marble mausoleum on the right bank of
+                                        the river Yamuna in the Indian city of Agra. It was commissioned in 1631 by the
+                                        Mughal emperor Shah Jahan to house the tomb of his favourite wife, Mumtaz Mahal;
+                                        it also houses the tomb of Shah Jahan himself.<br /><br />
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="TajMahal.html">See Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tour-block">
+                        <div class="tour-block-one wow fadeInUp animated animated" data-wow-delay="300ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <img src="{% static 'booking/images/resource/gate.jpg' %}" alt="">
+                                    <a href="IndiaGate.html"><i class="fas fa-link"></i></a>
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="rating"><span><i class="fas fa-star"></i>8.0 Superb</span></div>
+                                    <h3><a href="IndiaGate.html">India Gate</a></h3>
+                                    <h4>Rs. 00.00<span> / Per person</span></h4>
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>7 Days</li>
+                                        <li><i class="far fa-map"></i>New Delhi India</li>
+                                    </ul>
+                                    <p>India Gate, an "Arc-de-Triomphe" like archway in the middle of a crossroad.
+                                        Almost similar to its French counterpart, it commemorates the 70,000 Indian
+                                        soldiers who lost their lives fighting for the British Army during the World War
+                                        I. The memorial bears the names of more than 13,516 British and Indian soldiers
+                                        killed in the Northwestern Frontier in the Afghan war of 1919.<br /></p>
+                                    <div class="btn-box">
+                                        <a href="IndiaGate.html">See Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 tour-block">
+                        <div class="tour-block-one wow fadeInUp animated animated" data-wow-delay="600ms"
+                            data-wow-duration="1500ms">
+                            <div class="inner-box">
+                                <figure class="image-box">
+                                    <img src="{% static 'booking/images/resource/minar.png' %}" alt="">
+                                    <a href="Qutub%20Minar.html"><i class="fas fa-link"></i></a>
+                                </figure>
+                                <div class="lower-content">
+                                    <div class="rating"><span><i class="fas fa-star"></i>8.0 Superb</span></div>
+                                    <h3><a href="Qutub%20Minar.html">Qutub Minar</a></h3>
+                                    <h4>Rs 35.00 - Rs 550<span> / Per person</span></h4>
+                                    <ul class="info clearfix">
+                                        <li><i class="far fa-clock"></i>7 Days</li>
+                                        <li><i class="far fa-map"></i>New Delhi India</li>
+                                    </ul>
+                                    <p>The Qutb Minar, also spelled Qutub Minar and Qutab Minar, is a minaret and
+                                        "victory tower" that forms part of the Qutb complex, which lies at the site of
+                                        Delhi’s oldest fortified city, Lal Kot, founded by the Tomar Rajputs. It is a
+                                        UNESCO World Heritage Site in the Mehrauli area of South Delhi, India.
+                                        <br /><br /><br />
+                                    </p>
+                                    <div class="btn-box">
+                                        <a href="Qutub%20Minar.html">See Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- tour-section end -->
+
+
+        <!-- deals-section -->
+        <section class="deals-section" style="background-image: url({% static 'booking/images/resource/gateway.jpg' %});">
+            <div class="auto-container">
+                <div class="content_block_2">
+                    <div class="content-box">
+                        <h3>Gateway of <br />India</h3>
+                        <div class="price">
+                            <h4>Rs. 00.00</h4>
+                        </div>
+                        <p>The Gateway of India is an arch monument built during the 20th century in Bombay, India. The
+                            monument was erected to commemorate the landing of King George V and Queen Mary at Apollo
+                            Bunder on their visit to India in 1911.</p>
+                        <a href="Gateway%20of%20India.html" class="theme-btn">See Details</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- deals-section end -->
+
+
+        <!-- place-section -->
+        <section class="place-section sec-pad">
+            <div class="anim-icon">
+                <div class="icon anim-icon-1" style="background-image: url({% static 'booking/images/icons/anim-icon-1.png' %});"></div>
+                <div class="icon anim-icon-2" style="background-image: url({% static 'booking/images/shape/shape-3.png' %});"></div>
+                <div class="icon anim-icon-3" style="background-image: url({% static 'booking/images/shape/shape-3.png' %});"></div>
+            </div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-6 col-sm-12 title-column">
+                        <div class="sec-title">
+                            <p>Choose Your place</p>
+                            <h2>Popular Destinations</h2>
+                        </div>
+                        <div class="text">
+                            <p>India has Distinct Monuments all around the country</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 place-block">
+                        <div class="place-block-one">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/place-1.jpg' %}" alt=""></figure>
+                                <div class="text">
+                                    <h3><a href="NewDelhi.html">New Delhi</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 place-block">
+                        <div class="place-block-one">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/place-2.jpg' %}" alt=""></figure>
+                                <div class="text">
+                                    <h3><a href="maharashtra.html">Maharashtra</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 place-block">
+                        <div class="place-block-one">
+                            <div class="inner-box">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/place-3.jpg' %}" alt=""></figure>
+                                <div class="text">
+                                    <h3><a href="Rajasthan.html"> Rajasthan</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 place-block">
+                        <div class="place-block-one">
+                            <div class="inner-box">
+                                <figure class="image-box img-size"><img src="{% static 'booking/images/resource/place-4.jpg' %}" alt="">
+                                </figure>
+                                <div class="text">
+                                    <h3><a href="Tamil Nadu.html">Tamil Nadu</a></h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 link-column">
+                        <div class="link-box centred">
+                            <h3>Find All <br />Destination</h3>
+                            <a href="destination.html" class="theme-btn">Find Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonial-section -->
+        <section class="testimonial-section sec-pad centred">
+            <div class="auto-container">
+                <div class="sec-title centred">
+                    <p>Review & Testimonials</p>
+                    <h2>Top Reviews for My Heritage India</h2>
+                </div>
+                <div class="three-item-carousel owl-carousel owl-theme owl-nav-none">
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <ul class="rating-box clearfix">
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                            </ul>
+                            <div class="text">
+                                <div class="icon" style="background-image: url({% static 'booking/images/icons/quote-1.png' });"></div>
+                                <p>
+                                    FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK 
+                                </p>
+                            </div>
+                            <div class="author-box">
+                                <h4>Rishikaa Shukla</h4>
+                                <span class="designation">Web & Desktop Developer</span>
+                                <figure class="thumb-box"><img src="{% static 'booking/images/resource/testimonial-1.png' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <ul class="rating-box clearfix">
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                            </ul>
+                            <div class="text">
+                                <div class="icon" style="background-image: url({% static 'booking/images/icons/quote-1.png' %});"></div>
+                                <p>
+                                    FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK
+                                </p>
+                            </div>
+                            <div class="author-box">
+                                <h4>Vinayak Abrol</h4>
+                                <span class="designation">Android Developer</span>
+                                <figure class="thumb-box"><img src="{% static 'booking/images/resource/testimonial-2.png'%}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <ul class="rating-box clearfix">
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                            </ul>
+                            <div class="text">
+                                <div class="icon" style="background-image: url({% static 'booking/images/icons/quote-1.png' %});"></div>
+                                <p>
+                                    FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK 
+                                </p>
+                            </div>
+                            <div class="author-box">
+                                <h4>Pranav Gupta</h4>
+                                <span class="designation">Android Backend Developer</span>
+                                <figure class="thumb-box"><img src="{% static 'booking/images/resource/testimonial-3.png' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <ul class="rating-box clearfix">
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                            </ul>
+                            <div class="text">
+                                <div class="icon" style="background-image: url({% static 'booking/images/icons/quote-1.png' %});"></div>
+                                <p>
+                                    FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK 
+                                </p>
+                            </div>
+                            <div class="author-box">
+                                <h4>Aakarsh Marwah</h4>
+                                <span class="designation">Traveler</span>
+                                <figure class="thumb-box"><img src="{% static 'booking/images/resource/testimonial-4.png' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <ul class="rating-box clearfix">
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                            </ul>
+                            <div class="text">
+                                <div class="icon" style="background-image: url({% static 'booking/images/icons/quote-1.png' %});"></div>
+                                <p>
+                                    FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK
+                                </p>
+                            </div>
+                            <div class="author-box">
+                                <h4>Ishika Dhiman</h4>
+                                <span class="designation">Traveler</span>
+                                <figure class="thumb-box"><img src="{% static 'booking/images/resource/testimonial-5.png' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-block-one">
+                        <div class="inner-box">
+                            <ul class="rating-box clearfix">
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                                <li><i class="icon-Star"></i></li>
+                            </ul>
+                            <div class="text">
+                                <div class="icon" style="background-image: url({% static 'booking/images/icons/quote-1.png' %});"></div>
+                                <p>
+                                    FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK FEEDBACK       
+                                </p>
+                            </div>
+                            <div class="author-box">
+                                <h4>Priyansh Pandey</h4>
+                                <span class="designation">Traveler</span>
+                                <figure class="thumb-box"><img src="{% static 'booking/images/resource/testimonial-6.png' %}" alt="">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    <!-- testimonial-section end -->
+
+    <!-- main-footer -->
+    <footer class="main-footer bg-color-2">
+        <div class="footer-top">
+            <div class="vector-bg" style="background-image: url({% static 'booking/images/shape/shape-11.png' %});"></div>
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget logo-widget">
+                            <figure class="footer-logo"><a href="index.html"><img src="{% static 'booking/images/logo1.png' %}"
+                                        alt=""></a></figure>
+                            <div class="text">
+                                <p>My Heritage India Qr Based Paperless Vistor Management System</p>
+                            </div>
+                            <ul class="social-links clearfix">
+                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget links-widget">
+                            <div class="widget-title">
+                                <h3>Services</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="links-list clearfix">
+                                    <li><a href="index.html">Home</a></li>
+                                    <li><a href="index.html">About Us</a></li>
+                                    <li><a href="destination.html">Explore</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="Helpdesk.com">HelpDesk Portal</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 footer-column">
+                        <div class="footer-widget contact-widget">
+                            <div class="widget-title">
+                                <h3>Contacts</h3>
+                            </div>
+                            <div class="widget-content">
+                                <ul class="info-list clearfix">
+                                    <li><i class="fas fa-map-marker-alt" style="color: white !important;"></i>Thapar
+                                    </li>
+                                    <li><i class="fas fa-microphone" style="color: white !important;"></i><a
+                                            href="tel:+910000000000" style="color: white !important;">+91 00000
+                                            00000</a></li>
+                                    <li><i class="fas fa-envelope" style="color: white !important;"></i><a
+                                            href="xyz@gmail.com">xyz@gmail.com</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="auto-container">
+                <div class="bottom-inner clearfix">
+                    <div class="copyright pull-left">
+                        <p><a href="index.html">My Heritage India</a> &copy; 2023 All Right Reserved</p>
+                    </div>
+                    <ul class="footer-nav pull-right">
+                        <li><a href="index.html">Terms of Service</a></li>
+                        <li><a href="index.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- main-footer end -->
+
+
+
+    <!--Scroll to top-->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fal fa-angle-up"></span>
+    </button>
+    </div>
+
+
+    <!-- jequery plugins -->
+    <script src="{% static 'booking/js/jquery.js' %}"></script>
+    <script src="{% static 'booking/js/popper.min.js' %}"></script>
+    <script src="{% static 'booking/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'booking/js/owl.js' %}"></script>
+    <script src="{% static 'booking/js/wow.js' %}"></script>
+    <script src="{% static 'booking/js/validation.js' %}"></script>
+    <script src="{% static 'booking/js/jquery.fancybox.js' %}"></script>
+    <script src="{% static 'booking/js/appear.js' %}"></script>
+    <script src="{% static 'booking/js/scrollbar.js' %}"></script>
+    <script src="{% static 'booking/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'booking/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'booking/js/product-filter.js' %}"></script>
+
+    <!-- main-js -->
+    <script src="{% static 'booking/js/script.js' %}"></script>
+
+</body><!-- End of .page_wrapper -->
+
+</html>
