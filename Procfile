@@ -1,0 +1,1 @@
+web: gunicorn PortalSem4.wsgi
