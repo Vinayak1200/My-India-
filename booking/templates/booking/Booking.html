@@ -59,8 +59,8 @@
                                     <ul class="navigation clearfix">
 
                                         <li class="current dropdown"><a href="Home.php">Home</a></li>
-                                        <li class="dropdown">	<a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a></li>
-                                        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+                                        <li class="dropdown">	<a href="{% url 'index' %}"><i class="fas fa-user-circle"></i>Profile</a></li>
+                                        <li><a href="{% url 'index' %}"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
                                     </ul>
                                 </div>
                             </nav>
@@ -185,6 +185,7 @@
                                                 <input type="text" name="name" required="">
                                             </div>
                                         </div>
+                                        <input type="hidden" name="destination" value={{destination}}>
                                         <div class="col-lg-6 col-md-6 col-sm-12 column">
                                             <div class="form-group">
                                                 <label>Age</label>

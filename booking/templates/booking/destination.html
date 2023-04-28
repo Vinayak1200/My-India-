@@ -63,8 +63,8 @@
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
 
-                                        <li class="current dropdown"><a href="index.html">Home</a></li>
-                                        <li class="dropdown"><a href="destination.html">Destinations</a></li>
+                                        <li class="current dropdown"><a href="{% url 'index' %}">Home</a></li>
+                                        <li class="dropdown"><a href="{% url 'destination' %}">Destinations</a></li>
                                         <li><a href="contact.html">Contact</a></li>
 
                                         <li><a href="login.html">Login</a></li>
@@ -149,11 +149,11 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-                        <li><a href="contact.html"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="contact.html"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="contact.html"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="contact.html"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="contact.html"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="{% url 'destination' %}"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="{% url 'destination' %}"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="{% url 'destination' %}"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="{% url 'destination' %}"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="{% url 'destination' %}"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -187,7 +187,7 @@
                             <div class="inner-box">
                                 <figure class="image-box"><img src="{% static 'booking/images/resource/place-1.jpg' %}" alt=""></figure>
                                 <div class="text">
-                                    <h3><a href="NewDelhi.html">New Delhi</a></h3>
+                                    <h3><a href="{% url 'NewDelhi' %}">New Delhi</a></h3>
                                 </div>
                             </div>
                         </div>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +11,7 @@
     <title>My Heritage India</title>
 
     <!-- Fav Icon -->
-    <link rel="icon" href="assets/images/logo1.png" type="image/x-icon">
+    <link rel="icon" href="{% static 'booking/images/logo1.png' %}" type="image/x-icon">
 
     <!-- Google Fonts -->
     <link
@@ -21,31 +22,26 @@
         rel="stylesheet">
 
     <!-- Stylesheets -->
-    <link href="assets/css/font-awesome-all.css" rel="stylesheet">
-    <link href="assets/css/flaticon.css" rel="stylesheet">
-    <link href="assets/css/owl.css" rel="stylesheet">
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
-    <link href="assets/css/animate.css" rel="stylesheet">
-    <link href="assets/css/nice-select.css" rel="stylesheet">
-    <link href="assets/css/jquery-ui.css" rel="stylesheet">
-    <link href="assets/css/color.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
+    <link href="{% static 'booking/css/font-awesome-all.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/flaticon.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/owl.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/jquery.fancybox.min.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/animate.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/nice-select.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/jquery-ui.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/color.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'booking/css/responsive.css' %}" rel="stylesheet"> 
 
 </head>
 
 
 <!-- page wrapper -->
 
-<body style="background-image: url('assets/images/resource/white-paper-texture.jpg') !important;">
+<body style="background-image: url({% static 'booking/images/resource/white-paper-texture.jpg' %}) !important;">
 
     <div class="boxed_wrapper">
-
-
-
-
-
         <!-- main header -->
         <header class="main-header style-one">
             <!-- header-lower -->
@@ -53,7 +49,7 @@
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="contact.html"><img src="assets/images/logo1.png" alt=""></a>
+                            <figure class="logo"><a href="contact.html"><img src=({ %static 'booking/images/logo1.png' %})alt=""></a>
                             </figure>
                         </div>
                         <div class="menu-area clearfix">

@@ -101,7 +101,7 @@
                 <div class="auto-container">
                     <div class="outer-box">
                         <div class="logo-box">
-                            <figure class="logo"><a href="index.html"><img src="{% static 'booking/images/logo1.png' %}" alt=""></a>
+                            <figure class="logo"><a href="{% url 'index' %}"><img src="{% static 'booking/images/logo1.png' %}" alt=""></a>
                             </figure>
                         </div>
                         <div class="menu-area clearfix">
@@ -114,11 +114,11 @@
                             <nav class="main-menu navbar-expand-md navbar-light">
                                 <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                     <ul class="navigation clearfix">
-                                          <li class="current dropdown"><a href="index.html">Home</a></li>
-                                        <li class="dropdown"><a href="destination.html">Destinations</a></li>
-                                        <li><a href="contact.html">Contact</a></li> 
+                                          <li class="current dropdown"><a href="{% url 'index' %}">Home</a></li>
+                                        <li class="dropdown"><a href="{% url 'destination' %}">Destinations</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact</a></li> 
                    
-                                       <li><a href="login.html">Login</a></li>  
+                                       <li><a href="{% url 'login' %}">Login</a></li>  
 
                                     </ul>
                                 </div>
@@ -154,7 +154,7 @@
             <div class="close-btn"><i class="fas fa-times"></i></div>
 
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="{% static 'booking/images/logo1.png' %}" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="{% url 'index' %}"><img src="{% static 'booking/images/logo1.png' %}" alt="" title=""></a></div>
                 <div class="menu-outer">
                     <!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header-->
                 </div>
@@ -168,11 +168,11 @@
                 </div>
                 <div class="social-links">
                     <ul class="clearfix">
-                        <li><a href="index.html"><span class="fab fa-twitter"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-facebook-square"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-pinterest-p"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-instagram"></span></a></li>
-                        <li><a href="index.html"><span class="fab fa-youtube"></span></a></li>
+                        <li><a href="{% url 'index' %}"><span class="fab fa-twitter"></span></a></li>
+                        <li><a href="{% url 'index' %}"><span class="fab fa-facebook-square"></span></a></li>
+                        <li><a href="{% url 'index' %}"><span class="fab fa-pinterest-p"></span></a></li>
+                        <li><a href="{% url 'index' %}"><span class="fab fa-instagram"></span></a></li>
+                        <li><a href="{% url 'index' %}"><span class="fab fa-youtube"></span></a></li>
                     </ul>
                 </div>
             </nav>
@@ -217,7 +217,7 @@
                         <div class="feature-block-one wow fadeInUp animated animated" data-wow-delay="200ms"
                             data-wow-duration="1500ms">
                             <div class="inner-box">
-                                <figure class="image-box"><img src="{% static  'booking/images/resource/feature-2.jpg' %}" alt="">
+                                <figure class="image-box"><img src="{% static 'booking/images/resource/feature-2.jpg' %}" alt="">
                                 </figure>
                                 <div class="lower-content">
                                     <div class="icon-box"><i class="icon-2"></i></div>
@@ -324,11 +324,11 @@
                             <div class="inner-box">
                                 <figure class="image-box">
                                     <img src="{% static 'booking/images/resource/taj.jpg' %}" alt="">
-                                    <a href="TajMahal.html"><i class="fas fa-link"></i></a>
+                                    <a href="{% url 'TajMahal' %}"><i class="fas fa-link"></i></a>
                                 </figure>
                                 <div class="lower-content">
                                     <div class="rating"><span><i class="fas fa-star"></i>8.0 Superb</span></div>
-                                    <h3><a href="TajMahal.html">Taj Mahal</a></h3>
+                                    <h3><a href="{% url 'TajMahal' %}">Taj Mahal</a></h3>
                                     <h4>RS.50 - Rs.1300<span> / Per person</span></h4>
                                     <ul class="info clearfix">
                                         <li><i class="far fa-clock"></i>6 Days (Friday Closed)</li>
@@ -340,7 +340,7 @@
                                         it also houses the tomb of Shah Jahan himself.<br /><br />
                                     </p>
                                     <div class="btn-box">
-                                        <a href="TajMahal.html">See Details</a>
+                                        <a href="{% url 'TajMahal' %}">See Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -352,11 +352,11 @@
                             <div class="inner-box">
                                 <figure class="image-box">
                                     <img src="{% static 'booking/images/resource/gate.jpg' %}" alt="">
-                                    <a href="IndiaGate.html"><i class="fas fa-link"></i></a>
+                                    <a href="{% url 'IndiaGate' %}"><i class="fas fa-link"></i></a>
                                 </figure>
                                 <div class="lower-content">
                                     <div class="rating"><span><i class="fas fa-star"></i>8.0 Superb</span></div>
-                                    <h3><a href="IndiaGate.html">India Gate</a></h3>
+                                    <h3><a href="{% url 'IndiaGate' %}">India Gate</a></h3>
                                     <h4>Rs. 00.00<span> / Per person</span></h4>
                                     <ul class="info clearfix">
                                         <li><i class="far fa-clock"></i>7 Days</li>
@@ -368,7 +368,7 @@
                                         I. The memorial bears the names of more than 13,516 British and Indian soldiers
                                         killed in the Northwestern Frontier in the Afghan war of 1919.<br /></p>
                                     <div class="btn-box">
-                                        <a href="IndiaGate.html">See Details</a>
+                                        <a href="{% url 'IndiaGate' %}">See Details</a>
                                     </div>
                                 </div>
                             </div>
@@ -661,11 +661,11 @@
                                 <p>My Heritage India Qr Based Paperless Vistor Management System</p>
                             </div>
                             <ul class="social-links clearfix">
-                                <li><a href="index.html"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-google-plus-g"></i></a></li>
-                                <li><a href="index.html"><i class="fab fa-linkedin-in"></i></a></li>
+                                <li><a href="{% url 'index' %}"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="{% url 'index' %}"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="{% url 'index' %}"><i class="fab fa-instagram"></i></a></li>
+                                <li><a href="{% url 'index' %}"><i class="fab fa-google-plus-g"></i></a></li>
+                                <li><a href="{% url 'index' %}"><i class="fab fa-linkedin-in"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -676,11 +676,11 @@
                             </div>
                             <div class="widget-content">
                                 <ul class="links-list clearfix">
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="index.html">About Us</a></li>
-                                    <li><a href="destination.html">Explore</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="{% url 'index' %}">Home</a></li>
+                                    <li><a href="{% url 'index' %}">About Us</a></li>
+                                    <li><a href="{% url 'destination' %}">Explore</a></li>
+                                    <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                                    <li><a href="{% url 'login' %}">Login</a></li>
                                     <li><a href="Helpdesk.com">HelpDesk Portal</a></li>
                                 </ul>
                             </div>
@@ -712,11 +712,11 @@
             <div class="auto-container">
                 <div class="bottom-inner clearfix">
                     <div class="copyright pull-left">
-                        <p><a href="index.html">My Heritage India</a> &copy; 2023 All Right Reserved</p>
+                        <p><a href="{% url 'index' %}">My Heritage India</a> &copy; 2023 All Right Reserved</p>
                     </div>
                     <ul class="footer-nav pull-right">
-                        <li><a href="index.html">Terms of Service</a></li>
-                        <li><a href="index.html">Privacy Policy</a></li>
+                        <li><a href="{% url 'index' %}">Terms of Service</a></li>
+                        <li><a href="{% url 'index' %}">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -733,7 +733,6 @@
     </div>
 
 
-    <!-- jequery plugins -->
     <script src="{% static 'booking/js/jquery.js' %}"></script>
     <script src="{% static 'booking/js/popper.min.js' %}"></script>
     <script src="{% static 'booking/js/bootstrap.min.js' %}"></script>

@@ -133,7 +133,10 @@ def NewDelhi(request):
     return render(request, 'booking/NewDelhi.html')
 
 def Booking(request):
-    return render(request, 'booking/Booking.html')
+    destination=request.GET.get('name')
+    price = request.GET.get('price')
+    print(destination)
+    return render(request, 'booking/Booking.html',context={'destination':destination,'price':price})
 
 def Booking2(request):
     if request.method=='POST':
@@ -147,17 +150,23 @@ def Booking2(request):
         nationality = request.POST.get('nationality')
         parking = request.POST.get('parking')
         date = request.POST.get('dateofvisit')
+        destination = request.GET.get('destination')
+        base_amt=250
         print(date)
         print(parking)
-        base_amt = 100
+        # base_amt = 100
         parking_amt = float()
         if parking=='Car':
             parking_amt=30
         else:parking_amt=15
         
+    amount = int(numberA)*base_amt + int(numberC)*(0.5*base_amt)
+    
+    if destination=='IndiaGate':
+        amount=0
+        parking_amt=0
         
-        amount = int(numberA)*base_amt + int(numberC)*(0.5*base_amt)
-        params = {'name':name,'gender':gender,'age':age,'number_adults':numberA,'number_children':numberC,'country':country,'nationality':nationality,'parking':parking,'date':date,'amount':amount,'parking_amt':parking_amt}
+    params = {'name':name,'gender':gender,'age':age,'number_adults':numberA,'number_children':numberC,'country':country,'nationality':nationality,'parking':parking,'date':date,'amount':amount,'parking_amt':parking_amt,'destination':destination}
     return render(request, 'booking/Booking-2.html',context=params)
 
 def Booking3(request):
@@ -174,7 +183,11 @@ def Booking3(request):
         hiddendate = request.POST.get('hiddendateofvisit')
         ticket_price = request.POST.get('ticket_price')
         parking_price = request.POST.get('parking_price')
-        params = {'name':hiddenname,'gender':hiddengender,'age':hiddenage,'number_adults':hiddennumberA,'number_children':hiddennumberC,'country':hiddencountry,'nationality':hiddennationality,'parking':hiddenparking,'date':hiddendate,'amount':ticket_price,'parking_amt':parking_price,'tot_amt':ticket_price+parking_price,'number_people':hiddennumberA+hiddennumberC}
+        destination=request.GET.get('destination')
+        if destination=='IndiaGate':
+            ticket_price=0
+            parking_price=0
+        params = {'name':hiddenname,'gender':hiddengender,'age':hiddenage,'number_adults':hiddennumberA,'number_children':hiddennumberC,'country':hiddencountry,'nationality':hiddennationality,'parking':hiddenparking,'date':hiddendate,'amount':ticket_price,'parking_amt':parking_price,'tot_amt':ticket_price+parking_price,'number_people':hiddennumberA+hiddennumberC,'destination':destination}
         print(hiddendate)
         db.booking_booking.insert_one(params)
     return render(request, 'booking/Booking-3.html', context=params)
@@ -196,7 +209,7 @@ def Downloadpdf(request):
     }
     
     # buffer = GeneratePDF(datadict)
-    response = HttpResponse(content_type='application/pnf')
+    response = HttpResponse(content_type='application/png')
     response['Content-Disposition'] = 'attachment; filename=ticket.png'
     # response.write(buffer.getvalue())
     # buffer.close()
@@ -317,4 +330,14 @@ def handlerequest(request):
         
 # def paytm(request):
     # 
-    
+def TajMahal(request):
+    return render(request,'booking/TajMahal.html')
+
+def AgraFort(request):
+    return render(request, 'booking/AgraFort.html')
+
+def IndiaGate(request):
+    return render(request, 'booking/IndiaGate.html')
+
+def Akshardham(request):
+    return render(request, 'booking/Akshardham.html')
