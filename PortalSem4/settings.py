@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vd60m6!%f#+q^iv(j00z*s&qo9acj7-_wzc0#c$$h2vcg8-g#y
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL='booking.CustomUser'
 
