@@ -261,7 +261,6 @@ def Downloadpdf(request):
     
 
 
-def AfterBooking(request):
     if request.method=='POST':
         print("POST successful")
         name = request.POST.get('name')
@@ -292,21 +291,21 @@ def AfterBooking(request):
         # buffer = GeneratePDF(bookingdata)
         # return FileResponse(buffer, as_attachment=True, filename='ticket.pdf')
         
-        param_dict={
-        "MID": "WorldP64425807474247",
-        "ORDER_ID": obj.inserted_id,
-        "TXN_AMOUNT": str(amount),
-        "CUST_ID": 'acfff@paytm.com',
-        "INDUSTRY_TYPE_ID": "Retail",
-        "WEBSITE": "WEBSTAGING",
-        "CHANNEL_ID": "WEB",
-        'CALLBACK_URL':'http://127.0.0.1:8000/handlerequest',
-        'CHECKSUMHASH':''
-         }
-        param_dict['CHECKSUMHASH'] = checksum.generate_checksum(param_dict, MERCHANT_KEY)
-        return render(request, 'booking/paytm.html', context={'param_dict':param_dict})
+        # param_dict={
+        # "MID": "WorldP64425807474247",
+        # "ORDER_ID": obj.inserted_id,
+        # "TXN_AMOUNT": str(amount),
+        # "CUST_ID": 'acfff@paytm.com',
+        # "INDUSTRY_TYPE_ID": "Retail",
+        # "WEBSITE": "WEBSTAGING",
+        # "CHANNEL_ID": "WEB",
+        # 'CALLBACK_URL':'http://127.0.0.1:8000/handlerequest',
+        # 'CHECKSUMHASH':''
+        #  }
+        # param_dict['CHECKSUMHASH'] = checksum.generate_checksum(param_dict, MERCHANT_KEY)
+        # return render(request, 'booking/paytm.html', context={'param_dict':param_dict})
         #  return render(request, 'booking/AfterBooking.html', context=dict(bookingdata))
-    else:return HttpResponse("Sorry, there was some error in the backend")
+    # else:return HttpResponse("Sorry, there was some error in the backend")
     
 def paytm(request):
     return render(request, 'booking/paytm.html')
