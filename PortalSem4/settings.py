@@ -27,6 +27,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL='booking.CustomUser'
+
 
 # Application definition
 
@@ -37,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 'django_mondodb_engine',
+    'djongo',
+    'booking',
 ]
 
 MIDDLEWARE = [
@@ -73,12 +78,24 @@ WSGI_APPLICATION = 'PortalSem4.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+DATABASES = {
+       'default': {
+          'ENGINE': 'djongo',
+          'CLIENT': {
+             "host":"mongodb+srv://vinayak:2468@cluster0.ed2zc1e.mongodb.net/?retryWrites=true&w=majority",
+              "name":"BookingDB",
+              "authMechanism":"SCRAM-SHA-1"
+          }
+          
+      }
+  }
+
 # DATABASES = {
-    # 'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
-    # }
-# }
+    #  'default': {
+        #  'ENGINE': 'django.db.backends.sqlite3',
+        #  'NAME': BASE_DIR / 'db.sqlite3',
+    #  }
+#  }
 
 
 # Password validation
@@ -98,6 +115,8 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# AUTH_USER_MODELS = 'booking.User'
 
 
 # Internationalization
